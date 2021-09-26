@@ -1,0 +1,19 @@
+{
+    "compilerOptions": {
+      "target": "es6",
+      "allowJs": true,
+      "resolveJsonModule": true,
+      "allowSyntheticDefaultImports": true,
+      "module": "esnext",
+      "moduleResolution": "node",
+      "baseUrl": "./src",
+      "sourceMap": true,
+      "outDir": "./dist/",
+      "jsx": "react",
+      "esModuleInterop": true,
+      "paths": {
+        "test-utils": ["utils/test-utils"]
+      }
+    },
+    "exclude": []
+  }
