@@ -41,7 +41,7 @@ module.exports = (env, argv) => {
         },
         {
           test: /\.js$/,
-          exclude: [/node_modules/,/tpar-bff-protobufs/],
+          exclude: [/node_modules/],
           use: [{
             loader: 'eslint-loader',
             options: { quiet: true, failOnError: true }
@@ -67,9 +67,7 @@ module.exports = (env, argv) => {
               loader: "postcss-loader",
               options: {
                 plugins: [
-                  require('autoprefixer')({
-                    browsers: require('@xero/browserslist-autoprefixer')
-                  })
+                  require('autoprefixer')
                 ]
               }
             },

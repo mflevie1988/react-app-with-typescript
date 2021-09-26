@@ -1,5 +1,6 @@
 
 const webpack = require('webpack');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = function (config) {
   let newConfig = { ...config };
@@ -11,6 +12,9 @@ module.exports = function (config) {
   newConfig.plugins = [
     new webpack.DefinePlugin({
       'process.env': { NODE_ENV: JSON.stringify('development') }
+    }),
+    new HtmlWebpackPlugin({
+      template: 'public/index.html',
     }),
     ...config.plugins
   ];
